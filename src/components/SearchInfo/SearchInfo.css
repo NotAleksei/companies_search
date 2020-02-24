@@ -1,0 +1,12 @@
+.searchInfo{
+    display: flex;
+    margin-top: 48px;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #777777;
+}
+
+.searchInfo img{
+    margin-right: 32px;
+    width: 68px;
+}

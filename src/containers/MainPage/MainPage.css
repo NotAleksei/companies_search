@@ -1,0 +1,25 @@
+.mainPage{
+  width: 100%;
+  height: 100vh;
+  background-color: #F8F8F8
+}
+
+.header{
+  height: 80px;
+  background-color: white;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentTitle{
+  width: 736px;
+  font-family: Verdana;
+  font-size: 40px;
+  line-height: 49px;
+  color: #2B2829;
+}

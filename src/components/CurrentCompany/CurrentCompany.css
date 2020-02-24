@@ -1,0 +1,102 @@
+.currentCompany{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Verdana;
+    color: #2B2829;
+}
+.currentCompany_name{
+    border-bottom: 1px solid #DFDFDF;
+    font-size: 24px;
+}
+.currentCompany_name h3{
+    margin-top: 16px;
+    margin-bottom: 17px;
+}
+
+.currentCompany_info{
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.currentCompany_info__leftSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.currentCompany_info__leftSection-wrapper{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.currentCompany_info__header{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.currentCompany_info__rightSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 125px;
+    background: #F8F8F8;
+    border-radius: 3px;
+}
+.currentCompany_info__rightSection-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 180px;
+}
+
+.currentCompany_info__rightSectionInfo-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.saveButton {
+    /* сброс стилей */
+    width: 186px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* добавление своих стилей */
+    display: inline-block;
+    margin-top: 32px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-family: Verdana;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #F50634;
+  }
+
+.saveButton:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+ }
+
+.saveButton:hover{
+   color: #F50634;
+   border-color: currentColor;
+   background-color: white;
+}
+
+.saveButton {
+    outline: none;
+ }
+ .saveButton::-moz-focus-inner {
+    border: none;
+ }

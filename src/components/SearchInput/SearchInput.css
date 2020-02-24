@@ -1,0 +1,32 @@
+.searchInput {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: white;
+}
+
+.searchInput p{
+    font-family: Verdana;
+    font-size: 14px;
+}
+.searchInput input{
+    position: relative;
+    z-index: 2;
+    width: 688px;
+    height: 46px;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #777777;
+    padding-left: 18px;
+}
+
+.searchInput input:focus{
+    border: 1px solid #FAE29F;
+    outline: none;
+}
+
+::placeholder {
+    color: #B9B9B9;
+  }
