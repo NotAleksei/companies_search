@@ -23,3 +23,32 @@
   line-height: 49px;
   color: #2B2829;
 }
+
+.tabs_wrapper{
+  width: 736px;
+}
+
+.company_tab__wrapper{
+  display: flex;
+  width: 454px;
+  justify-content: space-between;
+}
+.company_tab__active{
+  border-top: 2px solid #F50634;
+  padding: 6px 24px 11px 24px;
+  font-family: Verdana;
+  font-size: 13px;
+  font-weight: bold;
+  color: #2B2829;
+  background-color: white;
+  cursor: pointer;
+}
+
+.company_tab{
+  padding: 8px 24px 11px 24px;
+  font-family: Verdana;
+  font-size: 13px;
+  font-weight: bold;
+  color: #B9B9B9;
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 .companiesContent{
   width: 736px;
   height: 568px;
+  box-sizing: border-box;
   padding: 24px;
   background-color: white;
 }
