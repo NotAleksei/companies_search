@@ -1,9 +1,11 @@
 import React from 'react';
 import './CurrentCompany.css';
+import savedPng from '../../img/saved.png'
 
 function CurrentCompany(props) {
   let company = props.company
-  console.log(company)
+
+
   return (
     <div className='currentCompany'>
         <div className='currentCompany_name'>
@@ -37,7 +39,14 @@ function CurrentCompany(props) {
             </div>
           </div>
         </div>
-        <button className='saveButton'>Сохранить</button>
+        {props.isSaved.length>0 ? <button 
+            className='saveButton__saved'
+          ><img src={savedPng}/> Сохранено
+        </button> : <button 
+            className='saveButton'
+            onClick={props.saveCompany}
+          >Сохранить
+        </button>}
     </div>
   );
 }

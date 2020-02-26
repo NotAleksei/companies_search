@@ -81,22 +81,42 @@
     text-decoration: none;
     color: #ffffff;
     background-color: #F50634;
+    outline: none;
   }
 
-.saveButton:active {
-    transform: translateY(1px);
-    filter: saturate(150%);
- }
 
 .saveButton:hover{
-   color: #F50634;
-   border-color: currentColor;
-   background-color: white;
+    color: #F50634;
+    border-color: currentColor;
+    background-color: white;
 }
 
-.saveButton {
-    outline: none;
- }
  .saveButton::-moz-focus-inner {
     border: none;
+ }
+
+ .saveButton__saved{
+       /* сброс стилей */
+    width: 186px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    /* добавление своих стилей */
+    display: inline-block;
+    margin-top: 32px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    padding: 0.5em;
+    padding-left: 0;
+    font-family: Verdana;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #B9B9B9;
+    outline: none;
+    cursor: default;
  }
