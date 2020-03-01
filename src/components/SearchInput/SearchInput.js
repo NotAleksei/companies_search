@@ -23,7 +23,6 @@ class SearchInput extends  React.Component {
       })
     .then(response => response.json())
     .then(result => {
-      console.log(this.state.value)
       this.setState({
         companies: result,
     })})

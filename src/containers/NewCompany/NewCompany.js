@@ -20,7 +20,6 @@ class NewCompany extends React.Component {
     if(localStorage.getItem('savedCompanies')){
       let savedCompanies = JSON.parse(localStorage.getItem('savedCompanies'))
       let isSaved = savedCompanies.filter(item=>item.data.inn===company.data.inn);
-      console.log(isSaved)
       this.setState({
         isSaved: isSaved
       })
@@ -45,6 +44,7 @@ class NewCompany extends React.Component {
     this.setState({
       isSaved: [this.state.currentCompany]
     })
+    this.props.handleComaniesList()
   }
 
   render(){

@@ -10,12 +10,13 @@ class SearchResultList extends React.Component {
   render(){
 
     let companies = this.props.companies
-    let listOfCompanies = companies.map((item, index)=>{
-      return <li onClick={()=>this.props.setCurentCompany(item)} key = {index}>
+
+    let listOfCompanies = companies.map((item)=>{
+      return <li onClick={()=>this.props.setCurentCompany(item)} key = {item.data.inn}>
         <h4>{item.value}</h4>
         <div className='innContainer'>
           <span>{item.data.inn}</span>
-          <span>{item.data.address.data.region_with_type}</span>
+          {item.data.address ? <span>{item.data.address.data.region_with_type}</span> : null}
         </div>
       </li>
     })

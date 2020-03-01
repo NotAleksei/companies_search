@@ -13,10 +13,10 @@ function CurrentCompany(props) {
         </div>
         <div className='currentCompany_info'>
           <div className='currentCompany_info__leftSection'>
-            <div className='currentCompany_info__leftSection-wrapper'>
+            {company.data.address ?<div className='currentCompany_info__leftSection-wrapper'>
               <span className='currentCompany_info__header'>Юридический адрес</span>
               <span className='currentCompany_info__value'>{company.data.address.unrestricted_value}</span>
-            </div>
+            </div> : null}
             {company.data.management ?<div className='currentCompany_info__leftSection-wrapper'>
               <span className='currentCompany_info__header'>{company.data.management.post}</span>
               <span className='currentCompany_info__value'>{company.data.management.name}</span>
