@@ -15,9 +15,7 @@ class CompanyCard extends React.Component {
       isOpen: !this.state.isOpen
     })
   }
-  
-
-
+ 
   render(){
     let company = this.props.company
 
@@ -28,7 +26,7 @@ class CompanyCard extends React.Component {
             <span>{company.value}</span>
           </div>
           <button className='deleteBtn' onClick={()=>this.props.deleteCompany(company)}>
-            <img src={deletePng}/>
+            <img src={deletePng} alt=""/>
           </button>
         </div>
         <div className={this.state.isOpen ? 'companyCard_info' : 'companyCard_info companyCard_info__hidden'}>
@@ -58,17 +56,16 @@ class CompanyCard extends React.Component {
         </div>
         {this.state.isOpen? <button  className='hideInfoBtn' onClick={this.hideInfo}>
           <span>скрыть подробности</span>
-          <img src={upPng} className='hideInfoPng'/>
+          <img src={upPng} alt="" className='hideInfoPng'/>
         </button> :
         <button  className='hideInfoBtn hideInfoBtn__hidden' onClick={this.hideInfo}>
           <span>подробнее</span>
-          <img src={downPng} className='hideInfoPng'/>
+          <img src={downPng} alt="" className='hideInfoPng'/>
         </button>
         }
       </div>
     );
   }
-
  }
 
 export default CompanyCard;

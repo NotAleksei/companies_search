@@ -5,7 +5,6 @@ import savedPng from '../../img/saved.png'
 function CurrentCompany(props) {
   let company = props.company
 
-
   return (
     <div className='currentCompany'>
         <div className='currentCompany_name'>
@@ -39,10 +38,11 @@ function CurrentCompany(props) {
             </div>
           </div>
         </div>
-        {props.isSaved.length>0 ? <button 
-            className='saveButton__saved'
-          ><img src={savedPng}/> Сохранено
-        </button> : <button 
+        {props.isSaved.length > 0
+        ? <button className='saveButton__saved'>
+          <img src={savedPng} alt=""/> Сохранено
+        </button>
+        : <button 
             className='saveButton'
             onClick={props.saveCompany}
           >Сохранить

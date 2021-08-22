@@ -5,7 +5,7 @@ import './SearchInfo.css';
 function SearchInfo() {
   return (
     <div className='searchInfo'>
-      <img src={addPng}></img>
+      <img src={addPng} alt=""></img>
       <p>
         Для добавления новой организации <br></br>введите ее название, ИНН или адрес
       </p>

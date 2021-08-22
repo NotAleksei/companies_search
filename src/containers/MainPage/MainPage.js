@@ -3,22 +3,24 @@ import './MainPage.css';
 import CompaniesContent from '../CompaniesContent/CompaniesContent'
 
 class MainPage extends React.Component {
-  state ={
+  state = {
     activeTab: 'newCompany',
     countOfSavedCompanies: null
   }
 
-  handleChangeTab(activeTab){
+  handleChangeTab(activeTab) {
     this.setState({
       activeTab: activeTab,
     })
   }
-  handleChangeCount=(count)=>{
+
+  handleChangeCount = (count) => {
     this.setState({
       countOfSavedCompanies: count,
     })
   }
-  render(){
+
+  render() {
     return (
       <div className='mainPage'>
         <div className='header'></div>
@@ -34,7 +36,7 @@ class MainPage extends React.Component {
               </div>
               <div className={this.state.activeTab === 'savedCompany'? 'company_tab company_tab__active': 'company_tab'} onClick={()=>this.handleChangeTab('savedCompany')}>
                 <span>Сохраненные организации </span>
-                {this.state.countOfSavedCompanies ? <span className='countOfCompanies'>{`(${this.state.countOfSavedCompanies})`}</span>:null}
+                {this.state.countOfSavedCompanies ? <span className='countOfCompanies'>{`(${this.state.countOfSavedCompanies})`}</span> : null}
               </div>
             </div>
           </div>

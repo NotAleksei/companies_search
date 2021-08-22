@@ -8,7 +8,6 @@ class SearchInput extends  React.Component {
     value: '',
     companies: null,
   }
-  
 
   getListOfCompanies(value){
     fetch('https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/party', {
@@ -25,44 +24,46 @@ class SearchInput extends  React.Component {
     .then(result => {
       this.setState({
         companies: result,
-    })})
+      })
+    })
   }
 
-  handleInput(e){
-    e.preventDefault()
-    let value = e.target.value
+  handleInput(e) {
+    e.preventDefault();
+    let value = e.target.value;
     this.setState({
       value: value,
-    })
-    this.getListOfCompanies(value)
+    });
+    this.getListOfCompanies(value);
   }
 
   setCurentCompany = (company) => {
     this.setState({
       value: '',
-    })
-    this.props.changeCurrentCompany(company)
+    });
+    this.props.changeCurrentCompany(company);
   }
 
-
-  render(){
+  render() {
     return (
     <div className='searchInput'>
       <p>Организация или ИП</p>
       <form>
         <input 
-        onChange = {(e)=>this.handleInput(e)} 
-        value = {this.state.value}
-        placeholder = 'Введите название, ИНН или адрес организации'
-        ></input>
+          onChange = {(e)=>this.handleInput(e)} 
+          value = {this.state.value}
+          placeholder = 'Введите название, ИНН или адрес организации'
+        />
       </form>
-      {this.state.value && this.state.companies ? <SearchResultList 
-      companies = {this.state.companies.suggestions}
-      setCurentCompany = {this.setCurentCompany}
-      /> : null}
+      {this.state.value && this.state.companies
+        && <SearchResultList 
+        companies = {this.state.companies.suggestions}
+        setCurentCompany = {this.setCurentCompany}
+        />
+      }
     </div>
-  );
-}
+   );
+  }
 }
 
 export default SearchInput;

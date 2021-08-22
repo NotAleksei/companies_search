@@ -7,11 +7,11 @@ class SearchResultList extends React.Component {
     companies: [],
   }
 
-  render(){
+  render() {
 
     let companies = this.props.companies
 
-    let listOfCompanies = companies.map((item)=>{
+    let listOfCompanies = companies.map((item) => {
       return <li onClick={()=>this.props.setCurentCompany(item)} key = {item.data.inn}>
         <h4>{item.value}</h4>
         <div className='innContainer'>
@@ -33,7 +33,6 @@ class SearchResultList extends React.Component {
       </div>
     );
   }
-
 }
 
 export default SearchResultList;
