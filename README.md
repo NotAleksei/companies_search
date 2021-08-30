@@ -7,6 +7,7 @@ Service for searching company by name, INN or address
 * React
 * JavaScript
 * CSS
+* API https://dadata.ru/
 
 ## Page:
 
